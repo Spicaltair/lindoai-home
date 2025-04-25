@@ -9,75 +9,197 @@
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <script defer data-domain="lindoai.art" src="https://plausible.io/js/script.js"></script>
   <style>
-    a { color: #444; text-decoration: underline; }
-    a:hover { color: #000; }
-    #blog, #contact { margin-top: 3rem; }
-    #footer-contact { margin-top: 2rem; font-size: 0.95rem; color: #666; text-align: center; }
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #fdf6f0;
+      color: #333;
+    }
+    header {
+      background: #fff0e6;
+      padding: 6rem 1.5rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      color: #333;
+    }
+    header p.subtitle {
+      font-size: 1.2rem;
+      color: #666;
+      margin-top: 1rem;
+    }
+    header p.tagline {
+      font-size: 1rem;
+      color: #999;
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+    nav {
+      background: #fff6f0;
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 1px solid #f1d4b7;
+    }
+    nav a {
+      margin: 0 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: #a25e2c;
+    }
+    section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+    section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: #8b4513;
+    }
+    #hero {
+      background: linear-gradient(135deg, #fff4e6, #ffeedd);
+      padding: 5rem 1rem;
+      border-radius: 16px;
+      margin-top: 2rem;
+      text-align: center;
+    }
+    #hero h2 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+    #hero p {
+      font-size: 1.2rem;
+      color: #555;
+      max-width: 720px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .project-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      border-radius: 16px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #ffffff, #f9f4ef);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+      transition: all 0.4s ease;
+    }
+    .project-link:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.1);
+    }
+    .project-card {
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .project-card img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 1rem;
+      transition: transform 0.3s ease;
+    }
+    .project-link:hover img {
+      transform: scale(1.1);
+    }
+    .project-card h3 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      color: #a25e2c;
+    }
+    .project-card p {
+      font-size: 1rem;
+      color: #666;
+    }
+    footer {
+      background: #fff6f0;
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #b07448;
+    }
   </style>
 </head>
-<body style="background: #fdfaf6 url('/background.png') center top repeat-x; background-size: cover;">
-  <header>
-    <img src="/logo.png" alt="Lindo AI Logo" style="height: 60px; margin-bottom: 1rem;">
-    <h1>Lindo AI</h1>
-    <p>自动化的美学｜Aesthetic by Automation</p>
-  </header>
+<body>
+<header>
+  <h1>Lindo AI</h1>
+  <p class="subtitle">麟朵：生成之美</p>
+  <p class="tagline">Pulchritudo Generationis</p>
+</header>
 
-  <nav>
-    <a href="#projects">项目</a>
-    <a href="#about">关于</a>
-    <a href="#blog">博客</a>
-    <a href="#contact">联系</a>
-  </nav>
+<nav>
+  <a href="#projects">项目</a>
+  <a href="#about">关于</a>
+  <a href="#blog">博客</a>
+  <a href="#contact">联系</a>
+</nav>
 
-  <section id="hero" style="text-align:center; background:#f8f5f0cc; padding:3rem 1rem;">
-    <h2 style="font-size:2rem; margin-bottom:1rem;">生成式设计 · 赋予空间与形象新的美感</h2>
-    <p style="font-size:1.1rem; color:#666; max-width:600px; margin:0 auto;">
-      Lindo AI 用技术为创意赋能，从装修图到头像生成、从内容同步到美学自动化工具，我们探索 AI 视觉的全部可能。
-    </p>
-  </section>
+<section id="hero">
+  <h2>赋能创意，探索视觉未来</h2>
+  <p>
+    Lindo AI 专注于生成式设计，从户型空间到个性头像，从内容发布到自动化美学。以技术为画笔，绘制新一代视觉世界。
+  </p>
+</section>
 
-  <section id="projects">
-    <h2>我们的项目</h2>
-    <div class="projects">
+<section id="projects">
+  <h2>我们的项目</h2>
+  <div class="projects">
+    <a href="https://zhuangxiu.love" class="project-link" target="_blank">
       <div class="project-card">
+        <img src="/qilin-icon.png" alt="麒麟图标">
         <h3>AI 装修图生成</h3>
-        <p>上传户型图，自动生成空间风格效果图。已上线，入口：<a href="https://zhuangxiu.love">zhuangxiu.love</a></p>
+        <p>上传户型图，自动生成空间风格效果图。</p>
       </div>
+    </a>
+    <a href="#" class="project-link">
       <div class="project-card">
+        <img src="/qilin-icon.png" alt="麒麟图标">
         <h3>AI头像生成器（开发中）</h3>
         <p>用 AI 创建独一无二的头像风格，适用于社交媒体、创作者标识等。</p>
       </div>
+    </a>
+    <a href="#" class="project-link">
       <div class="project-card">
+        <img src="/qilin-icon.png" alt="麒麟图标">
         <h3>内容同步发布工具</h3>
         <p>一次编辑，同时输出至小红书、知乎、公众号等多个平台。</p>
       </div>
-    </div>
-  </section>
-
-  <section id="about">
-    <h2>关于 Lindo AI</h2>
-    <p>
-      Lindo（在西班牙语中意为“美丽”）代表我们对图像、空间与美的追求。我们致力于用 AI 构建一个自动化生成的视觉世界，为创作者与普通用户提供高效、优雅的工具方案。
-    </p>
-  </section>
-
-  <section id="blog">
-    <h2>博客预览</h2>
-    <p style="max-width:600px; margin: 0 auto; text-align:center;">
-      敬请期待我们的图像生成哲学、开发日志与未来美学探索。
-    </p>
-  </section>
-
-  <section id="contact">
-    <h2>联系我们</h2>
-    <p style="text-align:center;">
-      官方邮箱：<a href="mailto:hello@lindoai.art">hello@lindoai.art</a><br>
-      欢迎合作、采访与技术交流。
-    </p>
-  </section>
-
-  <div id="footer-contact">
-    &copy; 2025 Lindo AI ｜麟朵科技 ｜ Made with vision & automation.
+    </a>
   </div>
+</section>
+
+<section id="about">
+  <h2>关于 Lindo AI</h2>
+  <p>
+    Lindo（在西班牙语中意为“美丽”）代表我们对图像、空间与美的追求。我们致力于用 AI 构建一个自动化生成的视觉世界，为创作者与普通用户提供高效、优雅的工具方案。
+  </p>
+</section>
+
+<section id="blog">
+  <h2>博客预览</h2>
+  <p style="max-width:600px; margin: 0 auto; text-align:center;">
+    敬请期待我们的图像生成哲学、开发日志与未来美学探索。
+  </p>
+</section>
+
+<section id="contact">
+  <h2>联系我们</h2>
+  <p style="text-align:center;">
+    官方邮箱：<a href="mailto:hello@lindoai.art">hello@lindoai.art</a><br>
+    欢迎合作、采访与技术交流。
+  </p>
+</section>
+
+<footer>
+  &copy; 2025 Lindo AI ｜麟朵科技 ｜ Pulchritudo Generationis
+</footer>
 </body>
 </html>
