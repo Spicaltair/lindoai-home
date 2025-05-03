@@ -1,26 +1,148 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lindo AI - 自动化的美学</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="/animation.css">
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <script defer data-domain="lindoai.art" src="https://plausible.io/js/script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lindo AI - 麟朵：生成之美</title>
+  <link rel="icon" href="public/logo.png" type="image/png" />
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+      background-color: #fdf6f0;
+      color: #3e2c1c;
+    }
+    header {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      background: linear-gradient(to bottom, #fff5eb, #ffe8d4);
+    }
+    header img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #a15b2e;
+    }
+    header p {
+      font-size: 1rem;
+      color: #7a4b24;
+    }
+
+    nav {
+      text-align: center;
+      background: #fff0e2;
+      padding: 1rem;
+      border-bottom: 1px solid #f0d8c5;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: #a15b2e;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 3rem 1rem;
+    }
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      width: 260px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+    }
+    .card img {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 1rem;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #8b4513;
+    }
+    .card p {
+      color: #5e4630;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 2rem 1rem;
+      background: #fff0e2;
+      color: #a15b2e;
+    }
+  </style>
 </head>
 <body>
-  <header><h1>Lindo AI</h1><p class="subtitle">麟朵：生成之美</p><p class="tagline">Pulchritudo Generationis</p></header>
-  <nav><a href="#projects">项目</a><a href="#about">关于</a><a href="#blog">博客</a><a href="#contact">联系</a></nav>
-  <section id="hero"><h2>赋能创意，探索视觉未来</h2><p>Lindo AI 专注于生成式设计，从户型空间到个性头像，从内容发布到自动化美学。</p></section>
-  <section id="projects"><h2>我们的项目</h2><div class="projects">
-    <a href="https://zhuangxiu.love" class="project-link" target="_blank"><div class="project-card"><img src="/logo.png" alt="麒麟图标"><h3>AI 装修图生成</h3><p>上传户型图，自动生成空间风格效果图。</p></div></a>
-    <a href="#" class="project-link"><div class="project-card"><img src="/logo.png" alt="麒麟图标"><h3>AI头像生成器（开发中）</h3><p>用 AI 创建独一无二的头像风格，适用于社交媒体、创作者标识等。</p></div></a>
-    <a href="https://lindosync.vercel.app" class="project-link" target="_blank"><div class="project-card"><img src="/logo.png" alt="麒麟图标"><h3>LindoSync 内容同步工具</h3><p>一次编辑，同时输出至小红书、知乎、公众号等多个平台。</p></div></a>
-  </div></section>
-  <section id="about"><h2>关于 Lindo AI</h2><p>Lindo（在西班牙语中意为“美丽”）代表我们对图像、空间与美的追求。</p></section>
-  <section id="blog"><h2>博客预览</h2><p>敬请期待我们的图像生成哲学、开发日志与未来美学探索。</p></section>
-  <section id="contact"><h2>联系我们</h2><p>官方邮箱：<a href="mailto:hello@lindoai.art">hello@lindoai.art</a></p></section>
-  <footer>&copy; 2025 Lindo AI ｜麟朵科技 ｜ Pulchritudo Generationis</footer>
+  <header>
+    <img src="/logo.png" alt="麒麟图标" />
+    <h1>Lindo AI｜麟朵</h1>
+    <p>生成之美 · Pulchritudo Generationis</p>
+  </header>
+
+  <nav>
+    <a href="#projects">项目</a>
+    <a href="#about">关于</a>
+    <a href="#contact">联系</a>
+  </nav>
+
+  <section id="projects">
+    <h2>我们的项目</h2>
+    <div class="projects">
+      <div class="card">
+        <img src="public/logo.png" alt="图标">
+		<a href="https://zhuangxiu.love" class="project-link" target="_blank">
+        <h3>AI 装修图生成</h3>
+        <p>上传户型图，自动生成多种风格的装修效果图。</p>
+      </div>
+      <div class="card">
+        <img src="public/logo.png" alt="图标">
+        <h3>AI头像生成器</h3>
+        <p>创作个性化头像，适用于社交平台与品牌标识。</p>
+      </div>
+      <div class="card">
+        <img src="public/logo.png" alt="图标">
+		<a href="lindosync/" class="project-link">
+        <h3>LindoSync 同步工具</h3>
+        <p>一次发布内容，同步至小红书、知乎、公众号等平台。</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>关于 Lindo AI</h2>
+    <p style="max-width: 700px; margin: auto; line-height: 1.6;">
+      Lindo（在西班牙语中意为“美丽”）代表我们对图像、空间与自动化美学的追求。麟朵科技专注于 AI 生成式视觉设计，为创作者与品牌提供未来感十足的视觉工具。
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>联系我们</h2>
+    <p style="text-align: center;">
+      官方邮箱：<a href="mailto:hello@lindoai.art">hello@lindoai.art</a>
+    </p>
+  </section>
+
+  <footer>
+    © 2025 Lindo AI ｜麟朵科技 ｜Pulchritudo Generationis
+  </footer>
 </body>
 </html>
