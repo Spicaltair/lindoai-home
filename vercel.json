@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "lindoai-home",
+  "public": true,
+  "builds": [
+    { "src": "public/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/public/$1" }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
+}
